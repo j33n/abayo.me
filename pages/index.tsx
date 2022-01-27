@@ -2,7 +2,7 @@ import {Header, HomeText, Footer} from '../components'
 
 const index = () => {
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
       <Header />
       <HomeText />
       <Footer />
