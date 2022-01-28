@@ -2,30 +2,24 @@ import Link from 'next/link'
 
 const HomeText = () => {
   return (
-    //TODO: The div is taking the height of the screen for now
     <div className="grid items-center h-[calc(100vh_-_92px)] justify-items-center">
       <p className="text-left">
-        Hello, My name is Jean ABAYO
+        Hello 👋, My name is Jean ABAYO and I love building awesome stuff
         <br />
-        I'm a software developer and I loooove building stuff
+        I'm a full-stack software developer with 4 years of experience
         <br />
-        Checkout some of{' '}
-        <Link href="/portfolio">
-          <a>the things I've worked on</a>
-        </Link>
-        <br />
-        If you're impressed{' '}
-        <Link href="/contact">
-          <a>contact me here</a>
-        </Link>
-        <br />
-        Still not impressed, read{' '}
+        You can learn a bit{' '}
         <Link href="/about">
-          <a>more about me</a>
+          <a className="text-blue-600 cursor-pointer">more about me here</a>
         </Link>
         <br />
-        In my free time I educate people on{' '}
-        <Link href="/about">the most amazing blog on earth</Link>
+        Reach out for mentorship, consulting or a gig at{' '}
+        <a
+          href="mailto:hello@abayo.me"
+          className="text-blue-600 cursor-pointer "
+        >
+          hello@abayo.me
+        </a>
       </p>
     </div>
   )
