@@ -4,8 +4,8 @@ const Drawer = ({children, isOpen = true, setIsOpen}) => {
   return (
     <main
       className={cx(
-        'fixed overflow-hidden hidden z-10 bg-opacity-25 inset-0 transform ease-in-out',
-        {'bg-gray-800': isOpen},
+        'fixed overflow-hidden z-10 bg-opacity-25 inset-0 transform ease-in-out',
+        {'bg-gray-800 block': isOpen, 'h-0': !isOpen},
       )}
       style={{top: '60px'}}
     >
