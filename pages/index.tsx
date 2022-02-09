@@ -1,12 +1,10 @@
-import {Header, HomeText, Footer} from '../components'
+import {HomeText, Wrapper} from '../components'
 
 const index = () => {
   return (
-    <div className="mx-auto">
-      <Header />
+    <Wrapper>
       <HomeText />
-      <Footer />
-    </div>
+    </Wrapper>
   )
 }
 
