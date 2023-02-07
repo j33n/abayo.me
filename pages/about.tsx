@@ -6,28 +6,29 @@ const About = () => {
   return (
     <Wrapper>
       <p className="text-left">
-        <b>Age:</b> 26 years old
+        <b>Current Age:</b> 26 years old
         <br />
-        <b>Location:</b> Rwanda, Kigali.
+        <b>Current Location:</b> Rwanda, Kigali.
         <br />
-        <b>Coding journey started:</b> at 16 in high school
+        <b>Coding Journey Inception:</b> 16 years old in High School.
         <br />
-        <b>First job:</b> at 21, working for an automotive company called
-        Mobiliti
+        <b>First Job:</b> at 21, working for an automotive company called
+        Mobiliti.
         <br />
+        <b>Favorite Stack:</b> ReactJS, GraphQL, Node.js, PostgreSQL, TypeScript
         <br />
         <br />
         Throughout my short carreer, I have worked with various companies and
         technologies.
         <br />
         I'm currently working on my second startup{" "}
-        <a href="https://www.kuisoko.com" className="text-blue-600 underline">
-          Kuisoko
-        </a>
+        <Link href="https://kuisoko.com/">
+          <a className="text-blue-600 underline">Kuisoko</a>
+        </Link>
         .
         <br />
-        <br />I love building complex user experiences and learning along the
-        way.
+        <br />I love building complex user experiences and learning a tone of
+        stuff along the way.
       </p>
     </Wrapper>
   );

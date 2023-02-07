@@ -28,7 +28,7 @@ const Menu = () => {
         <Hamburger setIsOpen={setIsOpen} open={isOpen} />
       </div>
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-        <SubMenu text="About" href="/about" />
+        <SubMenu text="More" href="/about" />
         {/* <SubMenu text="Blog - coming soon" /> */}
       </Drawer>
     </div>
