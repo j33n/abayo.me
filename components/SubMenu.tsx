@@ -11,7 +11,7 @@ const SubMenu = ({text, href}: SubMenuProps) => {
   return (
     <Link href={href}>
       <div className="w-full text-center bg-gray-100 cursor-pointer py-1.5 hover:bg-gray-300">
-        <a>{text}</a>
+        {text}
       </div>
     </Link>
   );

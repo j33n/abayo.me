@@ -22,8 +22,8 @@ const About = () => {
         technologies.
         <br />
         I'm currently working on my second startup{" "}
-        <Link href="https://kuisoko.com/">
-          <a className="text-blue-600 underline">Kuisoko</a>
+        <Link className="text-blue-600 underline" href="https://kuisoko.com/">
+          Kuisoko
         </Link>
         .
         <br />
