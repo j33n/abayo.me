@@ -16,10 +16,7 @@ const HomeText = () => {
       </Link>
       <br />
       Also, you can view my{" "}
-      <Link
-        href="https://docs.google.com/document/d/1o2knodh2j9VtqvJ5J_tmnYC2ot7y7zPo7SUlC-5rqYc/edit?usp=sharing"
-        className="text-blue-600 cursor-pointer"
-      >
+      <Link href="/resume" className="text-blue-600 cursor-pointer">
         full resume here.
       </Link>
       <br />

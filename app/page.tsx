@@ -1,11 +1,11 @@
-import {HomeText, Wrapper} from '../components'
+import { HomeText, Wrapper } from "./components";
 
 const index = () => {
   return (
     <Wrapper>
       <HomeText />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default index
+export default index;

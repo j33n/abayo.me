@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Footer, Content } from "../components";
+import { Header, Footer, Content } from ".";
 
 const Wrapper = ({ children }) => {
   return (
