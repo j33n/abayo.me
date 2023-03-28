@@ -1,10 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     screens: {
       sm: "480px",
@@ -19,6 +17,12 @@ module.exports = {
       current: "currentColor",
       white: "var(--color-white)",
       black: "var(--color-black)",
+      beige: {
+        100: "var(--color-beige-100)",
+        200: "var(--color-beige-200)",
+        300: "var(--color-beige-300)",
+        400: "var(--color-beige-400)",
+      },
       green: {
         100: "var(--color-green-100)",
         500: "var(--color-green-500)",
@@ -49,7 +53,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Exo 2', ...defaultTheme.fontFamily.sans],
+        sans: ["Exo 2", ...defaultTheme.fontFamily.sans],
       },
       typography: (theme) => {
         return {
@@ -58,6 +62,7 @@ module.exports = {
               {
                 a: {
                   textDecoration: "none",
+                  color: theme("colors.team.blue"),
                 },
                 "a:hover,a:focus": {
                   textDecoration: "underline",

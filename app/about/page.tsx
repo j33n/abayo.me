@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Wrapper>
       <p className="text-left">
-        <b>Current Age:</b> 26 years old
+        {/* <b>Current Age:</b> 26 years old
         <br />
         <b>Current Location:</b> Rwanda, Kigali.
         <br />
@@ -20,7 +20,7 @@ const About = () => {
         <br />
         Throughout my short carreer, I have worked with various companies and
         technologies.
-        <br />
+        <br /> */}
         I'm currently working on my second startup{" "}
         <Link className="text-blue-600 underline" href="https://kuisoko.com/">
           Kuisoko

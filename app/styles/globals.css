@@ -16,7 +16,7 @@
     --color-gray-600: #4b4c53;
     --color-gray-700: #3a3d4a;
     --color-gray-800: #2e3039;
-    --color-gray-900: #1f2028;
+    --color-gray-900: #282A3A;
     --color-green-100: #e7f9ed;
     --color-green-500: #30c85e;
     --color-green-600: #68d94a;
@@ -26,6 +26,10 @@
     --color-team-blue: #36a3ff;
     --color-team-red: #ff4545;
     --color-team-yellow: #a08600;
+    --color-beige-100: #faf8f1;
+    --color-beige-200: #faeab1;
+    --color-beige-300: #e5ba73;
+    --color-beige-400: #c58940;
     --color-yellow-500-dark: #a08600;
     --color-yellow-500-inverted: #ffd644;
 }
@@ -36,7 +40,7 @@
     --bg-primary: var(--color-white);
     --bg-secondary: var(--color-gray-100);
     --bg-alt: var(--color-gray-200);
-    /* --border-secondary: var(--color-gray-200); */
+    --border-secondary: var(--color-gray-200);
     --text-primary: var(--color-black);
     --text-secondary: var(--color-gray-500);
     color-scheme: light;
@@ -51,8 +55,14 @@
     --bg-primary: var(--color-gray-900);
     --bg-secondary: var(--color-gray-800);
     --bg-alt: var(--color-gray-700);
-    /* --border-secondary: var(--color-gray-600); */
+    --border-secondary: var(--color-gray-600);
     --text-primary: var(--color-white);
     --text-secondary: var(--color-slate-500);
     color-scheme: dark;
+}
+
+@layer base {
+    body {
+        @apply bg-beige-100 dark:bg-gray-900;
+    }
 }
