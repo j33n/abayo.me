@@ -11,7 +11,7 @@ const SubMenu = ({ text, href }: SubMenuProps) => {
   return (
     <Link
       href={href}
-      className="h-full text-lg font-semibold leading-6 cursor-pointer text-beige-400 dark:text-beige-300 hover:bg-gray-300"
+      className="h-full text-lg font-semibold leading-6 border-transparent cursor-pointer border-b-3 hover:border-gray-300 text-beige-400 dark:text-beige-300"
     >
       {text}
     </Link>

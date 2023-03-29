@@ -6,17 +6,7 @@ import { CiLight, CiDark } from "react-icons/ci";
 import IconButton from "./IconButton";
 
 const ThemeChanger = () => {
-  const [mounted, setMounted] = useState(false);
-
   const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <div className="h-full">

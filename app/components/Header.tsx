@@ -1,16 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { SlSocialGithub } from "react-icons/sl";
 
-import Link from "next/link";
-
-import Logo from "../assets/logo.svg";
 import ThemeChanger from "./ThemeChanger";
 import Hamburger from "./Hamburger";
 import Drawer from "./Drawer";
 import SubMenu from "./SubMenu";
 import IconButton from "./IconButton";
+
 import { sacramento } from "../utils/fonts";
 
 const Menu = () => {
@@ -36,7 +35,7 @@ const Menu = () => {
         className="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8"
         aria-label="Global"
       >
-        <div className="flex flex-1 text-2xl">
+        <div className="flex flex-1 text-2xl select-none">
           <Link href="/" className={sacramento.className}>
             j33n
           </Link>
@@ -53,12 +52,13 @@ const Menu = () => {
             </>
           ) : (
             <div className="flex gap-6">
-              <SubMenu text="Resume" href="/resume" />
-              <SubMenu text="Blog" href="/blog" />
+              <SubMenu text="About" href="#about" />
+              <SubMenu text="Skills" href="#skills" />
+              <SubMenu text="Experience" href="#experience" />
             </div>
           )}
         </div>
-        <div className="flex justify-end flex-1">
+        <div className="flex justify-end flex-1 space-x-4">
           <div className="flex items-center text-left">
             <ThemeChanger />
           </div>

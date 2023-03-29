@@ -1,5 +1,4 @@
 import Header from "./Header";
-import Footer from "./Footer";
 import HomeText from "./HomeText";
 import Hamburger from "./Hamburger";
 import Drawer from "./Drawer";
@@ -9,7 +8,6 @@ import Content from "./Content";
 
 export {
   Header,
-  Footer,
   HomeText,
   Hamburger,
   Drawer,
