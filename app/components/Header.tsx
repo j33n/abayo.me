@@ -1,12 +1,17 @@
-'use client';
+"use client";
 
 import React, { useEffect, useState } from "react";
+import { SlSocialGithub } from "react-icons/sl";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "../assets/logo.svg";
 import ThemeChanger from "./ThemeChanger";
+import Hamburger from "./Hamburger";
+import Drawer from "./Drawer";
+import SubMenu from "./SubMenu";
+import IconButton from "./IconButton";
+import { sacramento } from "../utils/fonts";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,33 +36,13 @@ const Menu = () => {
         className="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="flex h-full cursor-pointer">
-            <Image
-              src={Logo}
-              alt="Jean Abayo's Logo"
-              width={50}
-              height={50}
-              className="h-full"
-            />
+        <div className="flex flex-1 text-2xl">
+          <Link href="/" className={sacramento.className}>
+            j33n
           </Link>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Features
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Company
-          </a>
-        </div>
-        <div className="flex items-center text-left">
-          <ThemeChanger />
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* {isMobile ? (
+        <div className="lg:flex lg:gap-x-12">
+          {isMobile ? (
             <>
               <div className="flex items-center justify-end h-full text-right">
                 <Hamburger setIsOpen={setIsOpen} open={isOpen} />
@@ -67,13 +52,28 @@ const Menu = () => {
               </Drawer>
             </>
           ) : (
-            <div className="flex items-center h-full">
-              <SubMenu text="More" href="/resume" />
+            <div className="flex gap-6">
+              <SubMenu text="Resume" href="/resume" />
+              <SubMenu text="Blog" href="/blog" />
             </div>
-          )} */}
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Github <span aria-hidden="true">&rarr;</span>
-          </a>
+          )}
+        </div>
+        <div className="flex justify-end flex-1">
+          <div className="flex items-center text-left">
+            <ThemeChanger />
+          </div>
+          <Link
+            href="https://github.com/j33n"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <IconButton>
+              <SlSocialGithub
+                size={32}
+                className="text-black dark:text-white"
+              />
+            </IconButton>
+          </Link>
         </div>
       </nav>
     </header>
@@ -81,4 +81,3 @@ const Menu = () => {
 };
 
 export default Menu;
-

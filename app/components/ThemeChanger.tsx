@@ -22,11 +22,11 @@ const ThemeChanger = () => {
     <div className="h-full">
       {theme === "light" ? (
         <IconButton onClick={() => setTheme("dark")}>
-          <CiLight size={32} />
+          <CiLight size={40} />
         </IconButton>
       ) : (
         <IconButton onClick={() => setTheme("light")}>
-          <CiDark size={32} />
+          <CiDark size={40} />
         </IconButton>
       )}
     </div>
