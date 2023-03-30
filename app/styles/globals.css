@@ -62,7 +62,7 @@
 }
 
 @layer base {
-    body {
+    body, .footer {
         @apply bg-beige-100 dark:bg-gray-900;
         @apply w-full;
     }

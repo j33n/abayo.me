@@ -1,5 +1,7 @@
+"use client";
+
 const ResumeRoute = () => {
-  return <h1 className="text-red">Resume route</h1>;
+  return <div>Lorem Ipsum</div>;
 };
 
 export default ResumeRoute;
