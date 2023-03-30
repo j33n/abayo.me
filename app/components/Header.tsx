@@ -7,14 +7,20 @@ import { SlSocialGithub } from "react-icons/sl";
 import ThemeChanger from "./ThemeChanger";
 import Hamburger from "./Hamburger";
 import Drawer from "./Drawer";
-import SubMenu from "./SubMenu";
 import IconButton from "./IconButton";
 
 import { sacramento } from "../utils/fonts";
 
+export const MenuLink = ({ href, ...props }) => (
+  <Link
+    {...props}
+    href={href}
+    className="h-full text-lg font-semibold leading-6 border-transparent cursor-pointer border-b-3 hover:border-gray-300 text-beige-400 dark:text-beige-300"
+  />
+);
+
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
@@ -47,14 +53,13 @@ const Menu = () => {
                 <Hamburger setIsOpen={setIsOpen} open={isOpen} />
               </div>
               <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-                <SubMenu text="More" href="/about" />
+                <MenuLink text="More" href="/about" />
               </Drawer>
             </>
           ) : (
             <div className="flex gap-6">
-              <SubMenu text="About" href="#about" />
-              <SubMenu text="Skills" href="#skills" />
-              <SubMenu text="Experience" href="#experience" />
+              <MenuLink href="projects">Projects</MenuLink>
+              <MenuLink href="resume">Resume</MenuLink>
             </div>
           )}
         </div>

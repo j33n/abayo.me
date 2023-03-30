@@ -1,9 +1,9 @@
-import cx from "classnames";
+import clsx from "clsx";
 
 const Drawer = ({ children, isOpen = true, setIsOpen }) => {
   return (
     <main
-      className={cx(
+      className={clsx(
         "fixed overflow-hidden z-10 bg-opacity-25 inset-0 transform ease-in-out",
         { "bg-gray-800 block": isOpen, "h-0": !isOpen }
       )}

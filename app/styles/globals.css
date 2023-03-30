@@ -64,5 +64,6 @@
 @layer base {
     body {
         @apply bg-beige-100 dark:bg-gray-900;
+        @apply w-full;
     }
 }

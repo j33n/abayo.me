@@ -1,11 +1,11 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
-
+import Head from "next/head";
 import { exo2 } from "./utils/fonts";
 
 import "./styles/globals.css";
-import Head from "next/head";
+import { Header } from "./components";
 
 export default function RootLayout({
   children,
@@ -39,6 +39,7 @@ export default function RootLayout({
       </Head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system">
+          <Header />
           {children}
         </ThemeProvider>
       </body>
