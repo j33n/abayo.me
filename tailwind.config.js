@@ -32,13 +32,20 @@ module.exports = {
         300: "var(--color-beige-300)",
         400: "var(--color-beige-400)",
       },
+      pink: {
+        500: "var(--color-pink-500)",
+      },
       green: {
         100: "var(--color-green-100)",
         500: "var(--color-green-500)",
         600: "var(--color-green-600)",
       },
+      blue: {
+        500: "var(--color-blue-500)",
+      },
       yellow: {
         500: "var(--color-yellow-500)",
+        600: "var(--color-yellow-500-dark)",
         "500-inverted": "var(--color-yellow-500-inverted)",
       },
       gray: {

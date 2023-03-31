@@ -58,7 +58,7 @@ const Menu = () => {
             </>
           ) : (
             <div className="flex gap-6">
-              <MenuLink href="projects">Projects</MenuLink>
+              {/* <MenuLink href="projects">Projects</MenuLink> */}
               <MenuLink href="resume">Resume</MenuLink>
             </div>
           )}
