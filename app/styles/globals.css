@@ -23,21 +23,42 @@
     --color-red-500: #ff4545;
     --color-pink-500: rgba(236, 72, 153, 1);
     --color-yellow-500: #ffd644;
-    --color-team-unknown: #818890;
-    --color-team-blue: #36a3ff;
-    --color-team-red: #ff4545;
-    --color-team-yellow: #a08600;
     --color-beige-100: #faf8f1;
     --color-beige-200: #faeab1;
     --color-beige-300: #e5ba73;
     --color-beige-400: #c58940;
     --color-yellow-500-dark: #a08600;
     --color-yellow-500-inverted: #ffd644;
+    /* dark overlay */
+    --color-blackA1: hsla(0, 0%, 0%, 0.012);
+    --color-blackA2: hsla(0, 0%, 0%, 0.027);
+    --color-blackA3: hsla(0, 0%, 0%, 0.047);
+    --color-blackA4: hsla(0, 0%, 0%, 0.071);
+    --color-blackA5: hsla(0, 0%, 0%, 0.090);
+    --color-blackA6: hsla(0, 0%, 0%, 0.114);
+    --color-blackA7: hsla(0, 0%, 0%, 0.141);
+    --color-blackA8: hsla(0, 0%, 0%, 0.220);
+    --color-blackA9: hsla(0, 0%, 0%, 0.439);
+    --color-blackA10: hsla(0, 0%, 0%, 0.478);
+    --color-blackA11: hsla(0, 0%, 0%, 0.565);
+    --color-blackA12: hsla(0, 0%, 0%, 0.910);
+    /* light overlay */
+    --whiteA1: hsla(0, 0%, 100%, 0);
+    --whiteA2: hsla(0, 0%, 100%, 0.013);
+    --whiteA3: hsla(0, 0%, 100%, 0.034);
+    --whiteA4: hsla(0, 0%, 100%, 0.056);
+    --whiteA5: hsla(0, 0%, 100%, 0.086);
+    --whiteA6: hsla(0, 0%, 100%, 0.124);
+    --whiteA7: hsla(0, 0%, 100%, 0.176);
+    --whiteA8: hsla(0, 0%, 100%, 0.249);
+    --whiteA9: hsla(0, 0%, 100%, 0.386);
+    --whiteA10: hsla(0, 0%, 100%, 0.446);
+    --whiteA11: hsla(0, 0%, 100%, 0.592);
+    --whiteA12: hsla(0, 0%, 100%, 0.923);
 }
 
 .light,
 .dark .text-inverse {
-    --color-team-unknown: var(--color-black);
     --bg-primary: var(--color-white);
     --bg-secondary: var(--color-gray-100);
     --bg-alt: var(--color-gray-200);
@@ -49,10 +70,8 @@
 
 .dark,
 .light .text-inverse {
-    --color-team-yellow: #ffd644;
     --color-yellow-500: #ffd644;
     --color-yellow-500-inverted: #a08600;
-    --color-team-unknown: var(--color-white);
     --bg-primary: var(--color-gray-900);
     --bg-secondary: var(--color-gray-800);
     --bg-alt: var(--color-gray-700);
@@ -63,8 +82,10 @@
 }
 
 @layer base {
-    body, .footer {
-        @apply bg-beige-100 dark:bg-gray-900;
+
+    body,
+    .footer {
+        @apply bg-beige-100 dark:bg-gray-900 ;
         @apply w-full;
     }
 }

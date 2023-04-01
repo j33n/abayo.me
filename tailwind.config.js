@@ -26,6 +26,32 @@ module.exports = {
       current: "currentColor",
       white: "var(--color-white)",
       black: "var(--color-black)",
+      // light overlay
+      blackA1: "var(--color-blackA1)",
+      blackA2: "var(--color-blackA2)",
+      blackA3: "var(--color-blackA3)",
+      blackA4: "var(--color-blackA4)",
+      blackA5: "var(--color-blackA5)",
+      blackA6: "var(--color-blackA6)",
+      blackA7: "var(--color-blackA7)",
+      blackA8: "var(--color-blackA8)",
+      blackA9: "var(--color-blackA9)",
+      blackA10: "var(--color-blackA10)",
+      blackA11: "var(--color-blackA11)",
+      blackA12: "var(--color-blackA12)",
+      // light overlay
+      whiteA1: "var(--color-whiteA1)",
+      whiteA2: "var(--color-whiteA2)",
+      whiteA3: "var(--color-whiteA3)",
+      whiteA4: "var(--color-whiteA4)",
+      whiteA5: "var(--color-whiteA5)",
+      whiteA6: "var(--color-whiteA6)",
+      whiteA7: "var(--color-whiteA7)",
+      whiteA8: "var(--color-whiteA8)",
+      whiteA9: "var(--color-whiteA9)",
+      whiteA10: "var(--color-whiteA10)",
+      whiteA11: "var(--color-whiteA11)",
+      whiteA12: "var(--color-whiteA12)",
       beige: {
         100: "var(--color-beige-100)",
         200: "var(--color-beige-200)",
@@ -59,13 +85,6 @@ module.exports = {
         800: "var(--color-gray-800)",
         900: "var(--color-gray-900)",
       },
-      team: {
-        unknown: "var(--color-team-unknown)",
-        current: "var(--color-team-current)",
-        yellow: "var(--color-team-yellow)",
-        blue: "var(--color-team-blue)",
-        red: "var(--color-team-red)",
-      },
     },
     extend: {
       fontFamily: {
@@ -78,7 +97,7 @@ module.exports = {
               {
                 a: {
                   textDecoration: "none",
-                  color: theme("colors.team.blue"),
+                  color: theme("colors.blue.500"),
                 },
                 "a:hover,a:focus": {
                   textDecoration: "underline",
@@ -92,7 +111,7 @@ module.exports = {
               {
                 color: theme("colors.gray.500"),
                 a: {
-                  color: theme("colors.team.current"),
+                  color: theme("colors.blue.500"),
                 },
                 strong: {
                   color: theme("colors.black"),
@@ -121,7 +140,7 @@ module.exports = {
               {
                 color: theme("colors.slate.500"),
                 a: {
-                  color: theme("colors.team.current"),
+                  color: theme("colors.blue.500"),
                 },
                 strong: {
                   color: theme("colors.white"),

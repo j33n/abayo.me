@@ -8,7 +8,7 @@ const ThemeChanger = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="h-full">
+    <div className="flex justify-center h-full">
       {theme === "light" ? (
         <IconButton onClick={() => setTheme("dark")}>
           <CiLight size={40} />

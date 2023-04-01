@@ -26,7 +26,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="container flex flex-col justify-center mb-8 md:mx-auto"
+      className="flex flex-col justify-center mb-8 md:container md:mx-auto"
     >
       <p className="mb-4 text-xl w-fit">Skills</p>
 
@@ -36,7 +36,7 @@ const SkillsSection = () => {
         defaultValue="languages"
       >
         <Tabs.List
-          className="flex flex-col border-b md:flex-row shrink-0"
+          className="flex flex-wrap border-b sm:flex-nowrap md:flex-row shrink-0"
           aria-label="Skills"
         >
           {skills.map((skill) => (
@@ -45,13 +45,13 @@ const SkillsSection = () => {
               value={skill.name}
               key={skill.name + cuid()}
             >
-              <p className="truncate md:overflow-clip">{skill.title}</p>
+              <p>{skill.title}</p>
             </Tabs.Trigger>
           ))}
         </Tabs.List>
         {skills.map((skill) => (
           <Tabs.Content
-            className="flex flex-wrap gap-4 grow p-5 rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-beige-400 dark:focus:shadow-beige-300 data-[state=inactive]:hidden min-w-20"
+            className="flex mt-4 flex-wrap gap-4 grow p-5 rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-beige-400 dark:focus:shadow-beige-300 data-[state=inactive]:hidden min-w-20"
             value={skill.name}
             key={skill.name + cuid()}
           >
@@ -84,3 +84,5 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
+
+// TODO: add fallback image, when images are loading
