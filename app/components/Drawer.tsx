@@ -19,14 +19,14 @@ const Drawer = ({ children, isOpen = true, setIsOpen }) => {
           {children}
         </article>
       </section>
-      {/* {isOpen && (
+      {isOpen && (
         <section
           className="w-screen h-full cursor-pointer"
           onClick={() => {
             setIsOpen(false);
           }}
-        ></section>
-      )} */}
+        />
+      )}
     </main>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect, useLayoutEffect, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import Link from "next/link";
 import { SlSocialGithub } from "react-icons/sl";
 
