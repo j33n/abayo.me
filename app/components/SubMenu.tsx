@@ -9,10 +9,7 @@ type SubMenuProps = {
 
 const SubMenu = ({ text, href }: SubMenuProps) => {
   return (
-    <Link
-      href={href}
-      className=""
-    >
+    <Link href={href}>
       {text}
     </Link>
   );

@@ -51,7 +51,7 @@ const SkillsSection = () => {
         </Tabs.List>
         {skills.map((skill) => (
           <Tabs.Content
-            className="flex mt-4 flex-wrap gap-4 grow p-5 rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-beige-400 dark:focus:shadow-beige-300 data-[state=inactive]:hidden min-w-20"
+            className="flex mt-4 flex-wrap gap-4 grow p-5 outline-none focus:shadow-[0_0_0_2px] focus:shadow-beige-400 dark:focus:shadow-beige-300 data-[state=inactive]:hidden min-w-20"
             value={skill.name}
             key={skill.name + cuid()}
           >

@@ -9,7 +9,6 @@ import ontfLogo from "../assets/logos/ontfLogo.jpeg";
 import { IoIosSchool } from "react-icons/io";
 import { MdWork } from "react-icons/md";
 import carreer from "../data/carreer";
-import cuid from "cuid";
 
 const logos = {
   ontf: ontfLogo,
@@ -63,12 +62,20 @@ const ResumeRoute = () => {
                     </div>
                     <div className="flex self-stretch justify-start">
                       <p className="ml-5 text-sm text-gray-500 dark:text-whiteA10 mt-[2px]">
-                        {work.startDate}({work.duration})
+                        {work.startDate}
+                        {work.showDuration
+                          ? `(${work.duration})`
+                          : ` - ${work.endDate}`}
                       </p>
                     </div>
                   </div>
-                  <div className="mt-2 ml-5 shadow-2xl">
-                    <p className="ml-5">{work.description}</p>
+                  <div className="mt-2 ml-10 rounded shadow-lg bg-blackA4 dark:bg-whiteA4">
+                    {!!work.description && (
+                      <p className="p-2">{work.description}</p>
+                    )}
+                    <div className="ml-2">
+                      <p className="p-2 ml-2 text-sm">{work.summary}</p>
+                    </div>
                   </div>
                 </li>
               ))}

@@ -2,7 +2,9 @@
 
 import React, { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SlSocialGithub } from "react-icons/sl";
+import { SlSocialLinkedin } from "react-icons/sl";
 
 import ThemeChanger from "./ThemeChanger";
 import Hamburger from "./Hamburger";
@@ -17,34 +19,38 @@ export const MenuLink = ({
   href,
   children,
   cx,
+  active,
   ...props
 }: {
   href: string;
   children: ReactNode;
   cx?: string | "";
+  active?: boolean;
 }) => (
   <Link
     {...props}
     href={href}
     className={clsx(
-      "h-full text-lg font-semibold leading-6 border-transparent cursor-pointer border-b-3 hover:border-gray-300 text-beige-400 dark:text-beige-300",
-      cx
+      "h-full text-lg font-semibold leading-6 cursor-pointer border-b-3 hover:border-gray-300 text-beige-400 dark:text-beige-300",
+      cx,
+      { "border-gray-300": active, "border-transparent": !active }
     )}
   >
     {children}
   </Link>
 );
 
-export const GithubLink = ({ cx }: { cx: string }) => (
-  <Link
-    href="https://github.com/j33n"
-    rel="noopener noreferrer"
-    target="_blank"
-    className={cx}
-  >
-    <IconButton>
-      <SlSocialGithub size={32} className="text-black dark:text-white" />
-    </IconButton>
+export const IconLink = ({
+  cx,
+  href,
+  children,
+}: {
+  cx: string;
+  href: string;
+  children: ReactNode;
+}) => (
+  <Link href={href} rel="noopener noreferrer" target="_blank" className={cx}>
+    <IconButton>{children}</IconButton>
   </Link>
 );
 
@@ -52,6 +58,7 @@ const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [mounted, setMounted] = useState(false);
+  const path = usePathname();
 
   useEffect(() => {
     setMounted(true);
@@ -86,21 +93,50 @@ const Menu = () => {
                   <ThemeChanger />
                 </div>
                 <div className="flex justify-center flex-1 border-1">
-                  <GithubLink cx="flex" />
+                  <IconLink cx="flex" href="https://github.com/j33n">
+                    <SlSocialGithub
+                      size={32}
+                      className="text-black dark:text-white"
+                    />
+                  </IconLink>
+                </div>
+                <div className="flex justify-center flex-1 border-1">
+                  <IconLink
+                    cx="flex"
+                    href="https://linkedin.com/in/jeanabayo"
+                  >
+                    <SlSocialLinkedin
+                      size={28}
+                      className="text-black dark:text-white"
+                    />
+                  </IconLink>
                 </div>
               </div>
             </Drawer>
           </div>
           <div className="hidden gap-6 md:flex">
             {/* <MenuLink href="projects">Projects</MenuLink> */}
-            <MenuLink href="resume">Resume</MenuLink>
+            <MenuLink href="resume" active={path === "/resume"}>
+              Resume
+            </MenuLink>
           </div>
         </div>
         <div className="flex justify-end flex-1 space-x-4">
           <div className="items-center hidden text-left md:flex">
             <ThemeChanger />
           </div>
-          <GithubLink cx="hidden md:flex" />
+          <IconLink cx="hidden md:flex" href="https://github.com/j33n">
+            <SlSocialGithub size={32} className="text-black dark:text-white" />
+          </IconLink>
+          <IconLink
+            cx="hidden md:flex"
+            href="https://linkedin.com/in/jeanabayo"
+          >
+            <SlSocialLinkedin
+              size={28}
+              className="text-black dark:text-white"
+            />
+          </IconLink>
         </div>
       </nav>
     </header>
@@ -108,6 +144,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-// TODO: Add a way to reach you
-// TODO: Add a LinkedIn link

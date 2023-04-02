@@ -10,6 +10,7 @@ export const SkeletonHeader = () => {
       <div className="flex justify-end flex-1 space-x-4">
         <div className="w-12 h-12 bg-gray-300 rounded-full" />
         <div className="w-12 h-12 bg-gray-300 rounded-full" />
+        <div className="w-12 h-12 bg-gray-300 rounded-full" />
       </div>
     </div>
   );
