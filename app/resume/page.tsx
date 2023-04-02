@@ -22,20 +22,21 @@ const ResumeRoute = () => {
   return (
     <section
       id="#companies"
-      className="flex flex-col justify-center pl-8 mb-16 mr-4 bg-beige-100 md:container dark:bg-gray-900"
+      className="flex flex-col justify-center pl-8 mx-auto mb-16 mr-4 bg-beige-100 md:container dark:bg-gray-900"
     >
-      <div className="flex">
+      <div className="relative flex mt-6 mb-4">
         <div className="flex-1">
-          <p className="mb-4 text-xl">Experience</p>
+          <p className="text-xl">Experience</p>
         </div>
-        <div className="flex justify-end flex-1 mr-6">
-          <Link
-            href="mailto:jeanabayo3@gmail.com"
-            className="flex items-center p-2 text-gray-900 rounded bg-beige-300 w-fit"
+        <div className="flex justify-end flex-1 mr-1 md:mr-6">
+          <a
+            href="files/resume.pdf"
+            className="absolute flex items-center p-2 text-gray-900 rounded bg-beige-300 w-fit -top-4"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <MdDownload size={32} />
-            <p className="ml-2">Download</p>
-          </Link>
+          </a>
         </div>
       </div>
       <ol className="ml-5 sm:border-l-2 border-info-100">
