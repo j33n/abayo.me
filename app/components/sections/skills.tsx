@@ -86,3 +86,4 @@ const SkillsSection = () => {
 export default SkillsSection;
 
 // TODO: add fallback image, when images are loading
+// TODO: bugfix for section shifting

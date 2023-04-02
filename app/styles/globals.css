@@ -43,18 +43,18 @@
     --color-blackA11: hsla(0, 0%, 0%, 0.565);
     --color-blackA12: hsla(0, 0%, 0%, 0.910);
     /* light overlay */
-    --whiteA1: hsla(0, 0%, 100%, 0);
-    --whiteA2: hsla(0, 0%, 100%, 0.013);
-    --whiteA3: hsla(0, 0%, 100%, 0.034);
-    --whiteA4: hsla(0, 0%, 100%, 0.056);
-    --whiteA5: hsla(0, 0%, 100%, 0.086);
-    --whiteA6: hsla(0, 0%, 100%, 0.124);
-    --whiteA7: hsla(0, 0%, 100%, 0.176);
-    --whiteA8: hsla(0, 0%, 100%, 0.249);
-    --whiteA9: hsla(0, 0%, 100%, 0.386);
-    --whiteA10: hsla(0, 0%, 100%, 0.446);
-    --whiteA11: hsla(0, 0%, 100%, 0.592);
-    --whiteA12: hsla(0, 0%, 100%, 0.923);
+    --color-whiteA1: hsla(0, 0%, 100%, 0);
+    --color-whiteA2: hsla(0, 0%, 100%, 0.013);
+    --color-whiteA3: hsla(0, 0%, 100%, 0.034);
+    --color-whiteA4: hsla(0, 0%, 100%, 0.056);
+    --color-whiteA5: hsla(0, 0%, 100%, 0.086);
+    --color-whiteA6: hsla(0, 0%, 100%, 0.124);
+    --color-whiteA7: hsla(0, 0%, 100%, 0.176);
+    --color-whiteA8: hsla(0, 0%, 100%, 0.249);
+    --color-whiteA9: hsla(0, 0%, 100%, 0.386);
+    --color-whiteA10: hsla(0, 0%, 100%, 0.446);
+    --color-whiteA11: hsla(0, 0%, 100%, 0.592);
+    --color-whiteA12: hsla(0, 0%, 100%, 0.923);
 }
 
 .light,

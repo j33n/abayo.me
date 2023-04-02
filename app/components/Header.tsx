@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import { SlSocialGithub } from "react-icons/sl";
 
@@ -11,6 +11,7 @@ import IconButton from "./IconButton";
 
 import { sacramento } from "../utils/fonts";
 import clsx from "clsx";
+import { SkeletonHeader } from "./Skeleton";
 
 export const MenuLink = ({
   href,
@@ -49,6 +50,16 @@ export const GithubLink = ({ cx }: { cx: string }) => (
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <SkeletonHeader />;
+  }
 
   return (
     <header className="">
@@ -97,3 +108,6 @@ const Menu = () => {
 };
 
 export default Menu;
+
+// TODO: Add a way to reach you
+// TODO: Add a LinkedIn link

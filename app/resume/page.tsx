@@ -1,40 +1,81 @@
 import Image from "next/image";
 
-import andelaLogo from "../assets/logos/andelaLogo.png";
-import mobilitiLogo from "../assets/logos/mobilitiLogo.webp";
-import InmLogo from "../assets/logos/InmLogo.png";
-import safLogo from "../assets/logos/safLogo.png";
-import on24Logo from "../assets/logos/on24Logo.webp";
+import andelaLogo from "../assets/logos/andLogo.jpeg";
+import mobilitiLogo from "../assets/logos/mobLogo.jpeg";
+import inmLogo from "../assets/logos/inmLogo.jpeg";
+import safLogo from "../assets/logos/safcomLogo.jpeg";
+import ontfLogo from "../assets/logos/ontfLogo.jpeg";
+
+import { IoIosSchool } from "react-icons/io";
+import { MdWork } from "react-icons/md";
+import carreer from "../data/carreer";
+import cuid from "cuid";
+
+const logos = {
+  ontf: ontfLogo,
+  saf: safLogo,
+  inm: inmLogo,
+  mob: mobilitiLogo,
+};
 
 const ResumeRoute = () => {
   return (
     <section
       id="#companies"
-      className="flex flex-col justify-center mb-8 bg-gray-500 md:container md:mx-auto dark:bg-gray-900"
+      className="flex flex-col justify-center ml-8 bg-beige-100 md:container dark:bg-gray-900"
     >
-      <p className="">Companies</p>
-      <div className="flex">
-        <div className="flex bg-[#173b3f]">
-          <Image width="150" height="50" src={andelaLogo} alt="Andela" />
-          {/* Andela */}
-        </div>
-        <div className="flex">
-          <Image width="150" height="50" src={mobilitiLogo} alt="Mobiliti" />
-          {/* Mobiliti */}
-        </div>
-        <div className="flex">
-          <Image width="150" height="50" src={InmLogo} alt="I&M Bank" />
-          {/* I&M Bank */}
-        </div>
-        <div className="flex">
-          <Image width="150" height="50" src={safLogo} alt="Safaricom" />
-          {/* Safaricom */}
-        </div>
-        <div className="flex">
-          <Image width="100" height="50" src={on24Logo} alt="On24" />
-          {/* On24 */}
-        </div>
-      </div>
+      <p className="mb-4 text-xl">Experience</p>
+      <ol className="ml-5 border-l-2 border-info-100">
+        {carreer.work.map((job) => (
+          <li key={job.id}>
+            <div className="flex items-center flex-start">
+              <div className="-ml-[21px] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-info-100 text-info-700">
+                <Image src={andelaLogo} alt="" className="rounded" />
+              </div>
+              <p className="ml-10 font-bold">{job.companyName}</p>
+              <p className="ml-10 text-sm text-gray-500 dark:text-whiteA10">
+                {job.startDate} - {job.endDate}
+              </p>
+            </div>
+            <ol className="ml-20 border-l-2 border-info-100">
+              {job.journey.map((work) => (
+                <li key={work.id} className="mt-6">
+                  <div className="flex items-center flex-start">
+                    <div className="-ml-[21px] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-info-100 text-info-700">
+                      {!!logos[work.short] ? (
+                        <Image
+                          src={logos[work.short]}
+                          alt=""
+                          className="rounded"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center w-10 h-10 rounded dark:bg-white bg-beige-300">
+                          <MdWork
+                            size={32}
+                            className="text-white dark:text-beige-300"
+                          />
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex flex-col w-1/2">
+                      <p className="ml-5 font-bold">{work.name}</p>
+                      <p className="ml-5 text-sm">{work.role}</p>
+                    </div>
+                    <div className="flex self-stretch justify-start">
+                      <p className="ml-5 text-sm text-gray-500 dark:text-whiteA10 mt-[2px]">
+                        {work.startDate}({work.duration})
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-2 ml-5 shadow-2xl">
+                    <p className="ml-5">{work.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 };
