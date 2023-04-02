@@ -166,7 +166,7 @@ export const carreer = {
     },
     {
       id: cuid(),
-      name: "St. Kizito Technical High School",
+      name: "St. Kizito Technical High School, Save",
       type: "school",
       location: "",
       startDate: "2012",

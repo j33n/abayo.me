@@ -7,8 +7,9 @@ import safLogo from "../assets/logos/safcomLogo.jpeg";
 import ontfLogo from "../assets/logos/ontfLogo.jpeg";
 
 import { IoIosSchool } from "react-icons/io";
-import { MdWork } from "react-icons/md";
+import { MdDownload, MdWork } from "react-icons/md";
 import carreer from "../data/carreer";
+import Link from "next/link";
 
 const logos = {
   ontf: ontfLogo,
@@ -21,9 +22,22 @@ const ResumeRoute = () => {
   return (
     <section
       id="#companies"
-      className="flex flex-col justify-center mb-16 ml-8 mr-4 bg-beige-100 md:container dark:bg-gray-900"
+      className="flex flex-col justify-center pl-8 mb-16 mr-4 bg-beige-100 md:container dark:bg-gray-900"
     >
-      <p className="mb-4 text-xl">Experience</p>
+      <div className="flex">
+        <div className="flex-1">
+          <p className="mb-4 text-xl">Experience</p>
+        </div>
+        <div className="flex justify-end flex-1 mr-6">
+          <Link
+            href="mailto:jeanabayo3@gmail.com"
+            className="flex items-center p-2 text-gray-900 rounded bg-beige-300 w-fit"
+          >
+            <MdDownload size={32} />
+            <p className="ml-2">Download</p>
+          </Link>
+        </div>
+      </div>
       <ol className="ml-5 sm:border-l-2 border-info-100">
         {carreer.work.map((job) => (
           <li key={job.id}>
