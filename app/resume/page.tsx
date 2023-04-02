@@ -21,22 +21,22 @@ const ResumeRoute = () => {
   return (
     <section
       id="#companies"
-      className="flex flex-col justify-center ml-8 bg-beige-100 md:container dark:bg-gray-900"
+      className="flex flex-col justify-center mb-16 ml-8 mr-4 bg-beige-100 md:container dark:bg-gray-900"
     >
       <p className="mb-4 text-xl">Experience</p>
-      <ol className="ml-5 border-l-2 border-info-100">
+      <ol className="ml-5 sm:border-l-2 border-info-100">
         {carreer.work.map((job) => (
           <li key={job.id}>
             <div className="flex items-center flex-start">
-              <div className="-ml-[21px] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-info-100 text-info-700">
+              <div className="-ml-[21px] sm:flex h-[40px] w-[40px] hidden items-center justify-center">
                 <Image src={andelaLogo} alt="" className="rounded" />
               </div>
-              <p className="ml-10 font-bold">{job.companyName}</p>
+              <p className="font-bold sm:ml-10">{job.companyName}</p>
               <p className="ml-10 text-sm text-gray-500 dark:text-whiteA10">
                 {job.startDate} - {job.endDate}
               </p>
             </div>
-            <ol className="ml-20 border-l-2 border-info-100">
+            <ol className="ml-4 border-l-2 sm:ml-20 border-info-100">
               {job.journey.map((work) => (
                 <li key={work.id} className="mt-6">
                   <div className="flex items-center flex-start">
@@ -61,7 +61,7 @@ const ResumeRoute = () => {
                       <p className="ml-5 text-sm">{work.role}</p>
                     </div>
                     <div className="flex self-stretch justify-start">
-                      <p className="ml-5 text-sm text-gray-500 dark:text-whiteA10 mt-[2px]">
+                      <p className="sm:ml-5 text-sm text-gray-500 dark:text-whiteA10 mt-[2px]">
                         {work.startDate}
                         {work.showDuration
                           ? `(${work.duration})`
@@ -69,7 +69,7 @@ const ResumeRoute = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="mt-2 ml-10 rounded shadow-lg bg-blackA4 dark:bg-whiteA4">
+                  <div className="w-10/12 mt-2 ml-10 rounded shadow-lg bg-blackA4 dark:bg-whiteA4">
                     {!!work.description && (
                       <p className="p-2">{work.description}</p>
                     )}
@@ -80,6 +80,33 @@ const ResumeRoute = () => {
                 </li>
               ))}
             </ol>
+          </li>
+        ))}
+        <p className="mt-4 mb-2 text-xl sm:hidden">Education</p>
+        {carreer.school.map((education) => (
+          <li key={education.id} className="mt-4">
+            <div className="flex items-center flex-start">
+              <div className="-ml-[21px] hidden sm:flex items-center justify-center w-10 h-10 rounded dark:bg-white bg-beige-300">
+                <IoIosSchool
+                  size={32}
+                  className="text-white dark:text-beige-300"
+                />
+              </div>
+              <div className="flex flex-col w-1/2">
+                <p className="font-bold sm:ml-5">{education.name}</p>
+                <p className="text-sm sm:ml-5">{education.fieldOfStudy}</p>
+              </div>
+              <div className="flex self-stretch justify-start">
+                <p className="ml-10 text-sm text-gray-500 dark:text-whiteA10 mt-[2px]">
+                  {education.startDate} - {education.endDate}
+                </p>
+              </div>
+            </div>
+            {education.description && (
+              <div className="w-10/12 mt-2 rounded shadow-lg sm:ml-10 bg-blackA4 dark:bg-whiteA4">
+                <p className="p-2 ml-2 text-sm">{education.description}</p>
+              </div>
+            )}
           </li>
         ))}
       </ol>

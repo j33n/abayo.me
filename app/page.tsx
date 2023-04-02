@@ -4,7 +4,6 @@ import React from "react";
 import AboutSection from "./components/sections/about";
 import SkillsSection from "./components/sections/skills";
 import ProjectsSection from "./components/sections/projects";
-import { Footer } from "./components";
 
 const IndexRoute = () => {
   return (
@@ -13,7 +12,6 @@ const IndexRoute = () => {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
-        <Footer />
       </div>
     </div>
   );

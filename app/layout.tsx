@@ -5,7 +5,7 @@ import Head from "next/head";
 import { exo2 } from "./utils/fonts";
 
 import "./styles/globals.css";
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 
 export default function RootLayout({
   children,
@@ -41,6 +41,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system">
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
