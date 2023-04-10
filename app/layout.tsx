@@ -1,5 +1,6 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { exo2 } from "./utils/fonts";
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

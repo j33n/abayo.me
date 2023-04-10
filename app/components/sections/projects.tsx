@@ -10,7 +10,7 @@ const ProjectsSection = () => {
     useState<boolean>(false);
   return (
     <section
-      id="contact"
+      id="projects"
       className="flex flex-col justify-center mb-8 md:container md:mx-auto dark:bg-gray-900"
     >
       <p className="mb-4 text-xl w-fit">Projects</p>
