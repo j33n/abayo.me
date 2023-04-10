@@ -31,7 +31,7 @@ export const MenuLink = ({
     {...props}
     href={href}
     className={clsx(
-      "h-full text-lg font-semibold leading-6 cursor-pointer border-b-3 hover:border-gray-300 text-beige-400 dark:text-beige-300",
+      "h-full text-md flex items-center justify-center bg-beige-300 text-gray-900 rounded-full font-semibold leading-6 cursor-pointer border-b-2 hover:border-gray-600",
       cx,
       { "border-gray-300": active, "border-transparent": !active }
     )}
@@ -85,9 +85,6 @@ const Menu = () => {
               <Hamburger setIsOpen={setIsOpen} open={isOpen} />
             </div>
             <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-              <MenuLink href="resume" cx="text-center p-2 mb-2">
-                Resume
-              </MenuLink>
               <div className="flex flex-row border-white border-1">
                 <div className="flex-1">
                   <ThemeChanger />
@@ -101,10 +98,7 @@ const Menu = () => {
                   </IconLink>
                 </div>
                 <div className="flex justify-center flex-1 border-1">
-                  <IconLink
-                    cx="flex"
-                    href="https://linkedin.com/in/jeanabayo"
-                  >
+                  <IconLink cx="flex" href="https://linkedin.com/in/jeanabayo">
                     <SlSocialLinkedin
                       size={28}
                       className="text-black dark:text-white"
@@ -112,15 +106,15 @@ const Menu = () => {
                   </IconLink>
                 </div>
               </div>
+              <MenuLink href="resume" cx="p-2 mt-4">
+                Resume
+              </MenuLink>
             </Drawer>
           </div>
-          <div className="hidden gap-6 md:flex">
-            {/* <MenuLink href="projects">Projects</MenuLink> */}
-            <MenuLink href="resume" active={path === "/resume"}>
-              Resume
-            </MenuLink>
-          </div>
+          {/* <MenuLink href="projects">Projects</MenuLink> */}
+          {/* <MenuLink href="projects">Projects</MenuLink> */}
         </div>
+
         <div className="flex justify-end flex-1 space-x-4">
           <div className="items-center hidden text-left md:flex">
             <ThemeChanger />
@@ -137,6 +131,15 @@ const Menu = () => {
               className="text-black dark:text-white"
             />
           </IconLink>
+          <div className="hidden gap-6 md:flex">
+            <MenuLink
+              href="resume"
+              active={path === "/resume"}
+              cx="px-8"
+            >
+              Resume
+            </MenuLink>
+          </div>
         </div>
       </nav>
     </header>
