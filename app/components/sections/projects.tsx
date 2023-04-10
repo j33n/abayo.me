@@ -5,12 +5,12 @@ import { GoLinkExternal } from "react-icons/go";
 import ziadanetImg from "../../assets/ziadanet.png";
 import { useState } from "react";
 
-const ContactSection = () => {
+const ProjectsSection = () => {
   const [showExternalLinkIcon, setShowExternalLinkIcon] =
     useState<boolean>(false);
   return (
     <section
-      id="#companies"
+      id="contact"
       className="flex flex-col justify-center mb-8 md:container md:mx-auto dark:bg-gray-900"
     >
       <p className="mb-4 text-xl w-fit">Projects</p>
@@ -37,10 +37,10 @@ const ContactSection = () => {
               src={ziadanetImg}
               className="rounded-md"
             />
-            <div className="absolute bottom-0 text-black rounded-bl-md rounded-br-md bg-whiteA9 dark:bg-blackA9">
+            <div className="absolute bottom-0 text-black rounded-bl-md rounded-br-md bg-blackA7">
               <p className="p-2 text-xs">
                 <span className="font-bold">ZIADANET</span> is a solution for
-                smooth onboarding, leave management and expenses management for
+                onboarding, leave and expenses management for
                 businesses
               </p>
             </div>
@@ -51,4 +51,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ProjectsSection;

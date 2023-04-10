@@ -21,7 +21,7 @@ const logos = {
 const ResumeRoute = () => {
   return (
     <section
-      id="#companies"
+      id="companies"
       className="flex flex-col justify-center pl-8 mx-auto mb-16 mr-4 bg-beige-100 md:container dark:bg-gray-900"
     >
       <div className="relative flex mt-6 mb-4">

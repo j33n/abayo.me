@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
     <section
-      id="#about"
+      id="about"
       className="flex justify-center mb-8 md:container md:mx-auto"
     >
       <div className="lg:w-1/2 md:w-3/4">

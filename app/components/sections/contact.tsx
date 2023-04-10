@@ -4,7 +4,7 @@ import { RiMailSendFill } from "react-icons/ri";
 const ContactSection = () => {
   return (
     <section
-      id="#contact"
+      id="contact"
       className="flex flex-col justify-center mb-8 md:container md:mx-auto dark:bg-gray-900"
     >
       <Link
