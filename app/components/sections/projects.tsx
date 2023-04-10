@@ -1,18 +1,54 @@
+import Image from "next/image";
 import Link from "next/link";
-import { RiMailSendFill } from "react-icons/ri";
+import { GoLinkExternal } from "react-icons/go";
 
-const ProjectsSection = () => {
+import ziadanetImg from "../../assets/ziadanet.png";
+import { useState } from "react";
+
+const ContactSection = () => {
+  const [showExternalLinkIcon, setShowExternalLinkIcon] =
+    useState<boolean>(false);
   return (
     <section
       id="#companies"
       className="flex flex-col justify-center mb-8 md:container md:mx-auto dark:bg-gray-900"
     >
-      <Link href="mailto:jeanabayo3@gmail.com" className="flex items-center p-2 text-gray-900 rounded bg-beige-300 w-fit">
-        <RiMailSendFill size={32} />
-        <p className="ml-2">reach out</p>
-      </Link>
+      <p className="mb-4 text-xl w-fit">Projects</p>
+      <div className="">
+        <div
+          className="relative max-w-[240px]"
+          onMouseEnter={() => setShowExternalLinkIcon(true)}
+          onMouseLeave={() => setShowExternalLinkIcon(false)}
+        >
+          {showExternalLinkIcon && (
+            <div className="absolute top-1 right-1 bg-whiteA5">
+              <GoLinkExternal size={24} className="text-gray-900" />
+            </div>
+          )}
+          <Link
+            href="https://ziadanet.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Image
+              height={240}
+              width={240}
+              alt="ziadanet placeholder"
+              src={ziadanetImg}
+              className="rounded-md"
+            />
+            <div className="absolute bottom-0 text-black rounded-bl-md rounded-br-md bg-whiteA9 dark:bg-blackA9">
+              <p className="p-2 text-xs">
+                <span className="font-bold">ZIADANET</span> is a solution for
+                smooth onboarding, leave management and expenses management for
+                businesses
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };
 
-export default ProjectsSection;
+export default ContactSection;

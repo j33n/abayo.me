@@ -33,7 +33,7 @@ export const MenuLink = ({
     className={clsx(
       "h-full text-md flex items-center justify-center bg-beige-300 text-gray-900 rounded-full font-semibold leading-6 cursor-pointer border-b-2 hover:border-gray-600",
       cx,
-      { "border-gray-300": active, "border-transparent": !active }
+      { "border-gray-600": active, "border-transparent": !active }
     )}
   >
     {children}
