@@ -111,8 +111,6 @@ const Menu = () => {
               </MenuLink>
             </Drawer>
           </div>
-          {/* <MenuLink href="projects">Projects</MenuLink> */}
-          {/* <MenuLink href="projects">Projects</MenuLink> */}
         </div>
 
         <div className="flex justify-end flex-1 space-x-4">
