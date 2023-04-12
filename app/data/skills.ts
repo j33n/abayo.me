@@ -33,8 +33,8 @@ export const skills = [
         proficiency: levels.EXPERT,
       },
       {
-        name: "Redux",
-        icon: "https://skillicons.dev/icons?i=redux",
+        name: "ReactJS",
+        icon: "https://skillicons.dev/icons?i=react",
         proficiency: levels.EXPERT,
       },
       {
@@ -43,14 +43,9 @@ export const skills = [
         proficiency: levels.EXPERT,
       },
       {
-        name: "ReactJS",
-        icon: "https://skillicons.dev/icons?i=react",
+        name: "Redux",
+        icon: "https://skillicons.dev/icons?i=redux",
         proficiency: levels.EXPERT,
-      },
-      {
-        name: "NodeJS",
-        icon: "https://skillicons.dev/icons?i=nodejs",
-        proficiency: levels.COMPETENT,
       },
       {
         name: "Remix",
@@ -65,23 +60,23 @@ export const skills = [
       {
         name: "Jest",
         icon: "https://skillicons.dev/icons?i=jest",
-        proficiency: levels.INTERMEDIATE,
+        proficiency: levels.COMPETENT,
       },
       {
         name: "Python",
         icon: "https://skillicons.dev/icons?i=python",
         proficiency: levels.INTERMEDIATE,
       },
-      {
-        name: "Java",
-        icon: "https://skillicons.dev/icons?i=java",
-        proficiency: levels.BEGINNER,
-      },
-      {
-        name: "Rust",
-        icon: "https://skillicons.dev/icons?i=rust",
-        proficiency: levels.BEGINNER,
-      },
+      // {
+      //   name: "Java",
+      //   icon: "https://skillicons.dev/icons?i=java",
+      //   proficiency: levels.BEGINNER,
+      // },
+      // {
+      //   name: "Rust",
+      //   icon: "https://skillicons.dev/icons?i=rust",
+      //   proficiency: levels.BEGINNER,
+      // },
     ],
   },
   {
@@ -169,7 +164,7 @@ export const skills = [
   },
   {
     name: "others",
-    title: "Soft Skills + Others",
+    title: "Others",
     talents: [
       {
         name: "Jira/Linear/Scrum/Agile",
