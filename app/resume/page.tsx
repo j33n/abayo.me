@@ -9,7 +9,6 @@ import ontfLogo from "../assets/logos/ontfLogo.jpeg";
 import { IoIosSchool } from "react-icons/io";
 import { MdDownload, MdWork } from "react-icons/md";
 import carreer from "../data/carreer";
-import Link from "next/link";
 
 const logos = {
   ontf: ontfLogo,

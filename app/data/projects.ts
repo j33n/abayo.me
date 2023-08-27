@@ -1,20 +1,12 @@
-import ziadanetImg from "app/assets/ziadanet.png";
-import kuisokoImg from "app/assets/kuisoko.png";
+import lipaNaMpesaImg from "app/assets/lipaNaMpesaImg.png";
 
 export const projects = [
   {
     id: 1,
-    name: "ziadanet",
+    name: "Lipa Na M-PESA portal",
     description:
-      "A solution for onboarding, leave and expenses management for businesses",
-    link: "https://ziadanet.com",
-    img: ziadanetImg,
-  },
-  {
-    id: 2,
-    name: "kuisoko",
-    description: "Allow small and medium merchants to create online stores(WIP)",
-    link: "https://github.com/kuisoko/web",
-    img: kuisokoImg,
+      "As part of a team, I helped build and improve the Lipa Na M-PESA self onboarding portal and increased the number of merchants by 10%",
+    link: "https://m-pesaforbusiness.co.ke/",
+    img: lipaNaMpesaImg,
   },
 ];

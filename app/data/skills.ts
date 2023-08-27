@@ -67,16 +67,16 @@ export const skills = [
         icon: "https://skillicons.dev/icons?i=python",
         proficiency: levels.INTERMEDIATE,
       },
-      // {
-      //   name: "Java",
-      //   icon: "https://skillicons.dev/icons?i=java",
-      //   proficiency: levels.BEGINNER,
-      // },
-      // {
-      //   name: "Rust",
-      //   icon: "https://skillicons.dev/icons?i=rust",
-      //   proficiency: levels.BEGINNER,
-      // },
+      {
+        name: "Java",
+        icon: "https://skillicons.dev/icons?i=java",
+        proficiency: levels.INTERMEDIATE,
+      },
+      {
+        name: "Rust",
+        icon: "https://skillicons.dev/icons?i=rust",
+        proficiency: levels.BEGINNER,
+      },
     ],
   },
   {

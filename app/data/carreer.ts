@@ -162,7 +162,7 @@ export const carreer = {
       icon: "",
       comment: "",
       description:
-        "I attended AUCA for 2 years before dropping out to join the Andela Fellowship Program",
+        "I attended AUCA for 2 years before joining the Andela Fellowship Program",
     },
     {
       id: cuid(),
